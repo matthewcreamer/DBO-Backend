@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_permissions",
+  "info": {
+    "singularName": "table-permission",
+    "pluralName": "table-permissions",
+    "displayName": "table-permission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "table_name": {
+      "type": "string"
+    },
+    "can_get": {
+      "type": "boolean",
+      "default": false
+    },
+    "can_post": {
+      "type": "boolean",
+      "default": false
+    },
+    "can_put": {
+      "type": "boolean",
+      "default": false
+    },
+    "can_delete": {
+      "type": "boolean",
+      "default": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_permission"
+    }
+  }
+}

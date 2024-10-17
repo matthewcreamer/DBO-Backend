@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exp_tables",
+  "info": {
+    "singularName": "exp-table",
+    "pluralName": "exp-tables",
+    "displayName": "expTable",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tblidx": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "dwExp": {
+      "type": "integer",
+      "required": false,
+      "default": 0
+    },
+    "dwNeed_Exp": {
+      "type": "integer"
+    },
+    "wStageWinSolo": {
+      "type": "integer"
+    },
+    "wStageDrawSolo": {
+      "type": "integer"
+    },
+    "wStageLoseSolo": {
+      "type": "integer"
+    },
+    "wWinSolo": {
+      "type": "integer"
+    },
+    "wPerfectWinSolo": {
+      "type": "integer"
+    },
+    "wStageWinTeam": {
+      "type": "integer"
+    },
+    "wStageDrawTeam": {
+      "type": "integer"
+    },
+    "wStageLoseTeam": {
+      "type": "integer"
+    },
+    "wWinTeam": {
+      "type": "integer"
+    },
+    "wPerfectWinTeam": {
+      "type": "integer"
+    },
+    "wNormal_Race": {
+      "type": "integer"
+    },
+    "wSuperRace": {
+      "type": "integer"
+    },
+    "dwMobExp": {
+      "type": "integer"
+    },
+    "dwPhyDefenceRef": {
+      "type": "integer"
+    },
+    "dwEngDefenceRef": {
+      "type": "integer"
+    },
+    "dwMobZenny": {
+      "type": "integer"
+    }
+  }
+}
