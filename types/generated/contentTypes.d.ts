@@ -5,7 +5,7 @@ export interface ApiExpTableExpTable extends Struct.CollectionTypeSchema {
   info: {
     singularName: 'exp-table';
     pluralName: 'exp-tables';
-    displayName: 'expTable';
+    displayName: 'exp-table';
     description: '';
   };
   options: {
@@ -33,6 +33,10 @@ export interface ApiExpTableExpTable extends Struct.CollectionTypeSchema {
     dwPhyDefenceRef: Schema.Attribute.Integer;
     dwEngDefenceRef: Schema.Attribute.Integer;
     dwMobZenny: Schema.Attribute.Integer;
+    owner: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -565,6 +569,10 @@ export interface PluginUsersPermissionsUser
     user_permission: Schema.Attribute.Relation<
       'oneToMany',
       'api::table-permission.table-permission'
+    >;
+    exp_tables: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::exp-table.exp-table'
     >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

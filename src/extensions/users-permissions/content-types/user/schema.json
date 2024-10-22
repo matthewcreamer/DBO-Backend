@@ -82,6 +82,12 @@
       "relation": "oneToMany",
       "target": "api::table-permission.table-permission",
       "mappedBy": "user"
+    },
+    "exp_tables": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exp-table.exp-table",
+      "mappedBy": "owner"
     }
   }
 }

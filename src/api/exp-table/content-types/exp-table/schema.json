@@ -4,7 +4,7 @@
   "info": {
     "singularName": "exp-table",
     "pluralName": "exp-tables",
-    "displayName": "expTable",
+    "displayName": "exp-table",
     "description": ""
   },
   "options": {
@@ -72,6 +72,12 @@
     },
     "dwMobZenny": {
       "type": "integer"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "exp_tables"
     }
   }
 }
